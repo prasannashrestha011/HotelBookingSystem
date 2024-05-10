@@ -1,0 +1,254 @@
+
+.main-header-name{
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    font-family:  Helvetica;
+}
+.home-main-body{
+   width: 100%;
+   height: 100vh;
+   overflow-y: auto;
+   overflow-x: auto;
+ 
+}
+.node_container{
+    width:70%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin:0 auto;
+    min-width: fit-content;
+    border-radius: 40px;
+    margin-bottom: 40px;
+}
+.room_details_main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    justify-content: center; /* Center the grid horizontally */
+    gap: 20px; /* Gap between grid items */
+    width: fit-content;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Set a maximum width */
+    padding: 0 20px; /* Optional: Add padding to prevent content from touching the edges */
+   
+   
+   
+  }
+  
+.room_details_container{
+    list-style: none;
+    width: fit-content;
+   
+    
+}
+.room_details_node{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+   align-items: center;
+    margin-top: 0px;
+    width: 250px;
+
+    margin-bottom: 80px;
+}
+.room_image_container{
+    width: fit-content;
+    height: 150px;
+    overflow: hidden;
+}
+.room_image{
+
+    width: 210px;
+    border-radius: 15px;
+}
+.room_details_header{
+    font-family: Helvetica;
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 100%;
+   gap:10px
+}
+.room_info{
+    
+    height: 120 px;
+    font-family: Helvetica;
+}
+.room_second_container{
+   
+ 
+    border-radius: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+
+   
+   
+}
+
+.edit_container {
+    position: fixed; /* Keeps the editing interface fixed in place */
+    top: 228px; /* Adjust this value according to your layout */
+    left: 78%;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.body-main{
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width:400px){
+    
+    .node_container{
+       
+        justify-content: center;
+        width: 80%;
+    }
+    .nav-buttons{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    
+}
+@media   (max-width:450px){
+    .confirm_panel{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding-top: 20%;
+    }
+    .node_container{
+       
+        justify-content: center;
+        width: 90%;
+    }
+    .nav-buttons{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .room_details_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        min-width: 20%;
+        
+    }
+    .header-template{
+      margin-left: 0%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+        width: 100%;
+    }
+    .home_detail_page{
+        height: 80%;
+      }
+      .hotel_detail_page{
+        height: 80%;
+      }
+}
+@media (min-width:500px) and (max-width:850px)  {
+    .nav-buttons{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    
+    .header-template{
+        margin-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+          width: 100%;
+      }
+    .node_container{
+       
+        justify-content: center;
+        width: 60%;
+    }
+    .room_details_main{
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+        margin: 0 auto;
+        max-width: 100%; /* Set a maximum width */
+        padding: 0 20px; /* Optional: Add padding to prevent content from touching the edges */
+       
+    }
+    .hotel_detail_page{
+        height: 80%;
+      }
+    
+}
+@media (min-width:860px) and (max-width:1360px){
+    .header-template{
+        margin-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:1px solid yellow;
+       
+          width: 100%;
+      }
+      .home_detail_page{
+        height: 100%;
+      }
+      .hotel_detail_page{
+        height: 80%;
+      }
+    .room_details_main {
+      
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+        justify-content: center; /* Center the grid horizontally */
+        gap: 20px; /* Gap between grid items */
+         width: 100%;
+         
+        margin: 0 auto;
+        overflow-y: auto; /* Enable horizontal scrolling */
+        max-width: 100%; /* Set a maximum width */
+        padding: 0 20px; /* Optional: Add padding to prevent content from touching the edges */
+      }
+    
+}
+
+@media (min-width:1370px) and (max-width:1920px){
+    .header-template{
+        margin-left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+          width: 100%;
+      }
+      .home_detail_page{
+        height: fit-content;
+      }
+    .node_container{
+       
+        justify-content: center;
+        width: 60%;
+    }
+    .room_details_main {
+        
+    }
+
+    .room_details_main {
+        justify-content: center;
+    }
+
+   
+}

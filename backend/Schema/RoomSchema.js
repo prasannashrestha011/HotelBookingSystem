@@ -1,0 +1,41 @@
+const mongoose=require('mongoose');
+const Schema=mongoose.Schema({
+    room_id:{
+        type:Number,
+        unique:true,
+        required:true,
+    }
+    ,
+    room_name:{
+        type:String,
+        required:true,
+    },
+    room_type:{
+        type:String,
+        required:true,
+    },
+    room_image_path:{
+       type:String,
+       required:true,
+    },
+    room_availability:{
+        type:Boolean,
+        required:true,
+    },
+    room_price:{
+        type:Number
+    },
+    room_books:{
+        type:Map,
+        of:{
+            type:Boolean,
+            default:false
+        },
+        default:{},
+    },
+    room_description:{
+        type:String,
+    },
+   
+});
+module.exports=mongoose.model('room_details',Schema);
