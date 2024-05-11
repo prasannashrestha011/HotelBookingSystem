@@ -28,26 +28,42 @@ export default function LoginPage(){
         console.log(`${userLog} is lcal storage`);
     }
     return(
-        auth.status==200 || userLog==200 ? <Navigate to="/home" />: <center>
-        <h1>Please Sign in</h1>
+        auth.status==200 || userLog==200 ? <Navigate to="/home" />: 
+       <div className='w-full h-svh ' style={{backgroundColor:'#4100FF'}}>
 
-        <form onSubmit={LoginHandler}>
-        <label for='username_input'>
-        <h3>Username:</h3> 
-        <input type='text' 
-        value={username} 
-        onChange={(e)=>setUsername(e.target.value)} 
-        id="username_input"/>
-        </label>
-        <label for='password_input'> 
-        <h3>Password:</h3>     
-            <input type='password' 
-            value={password} 
-            onChange={(e)=>setPassword(e.target.value)} 
-            id='password_input' />
-            </label>
-            <button type='submit'>Submit</button>
+         <center>
+        <p className='text-4xl text-blue-200'>Please sign in</p>
+
+        <form onSubmit={LoginHandler} className='flex flex-col gap-4  h-80 justify-center items-center'>
+        
+               
+                    <label for='username_input' >
+                    <fieldset className='flex flex-col items-start'>
+                        <h3 className='font-semibold text-2xl text-slate-100'>Username:</h3> 
+                        <input type='text' 
+                        value={username} 
+                        onChange={(e)=>setUsername(e.target.value)} 
+                        id="username_input"
+                        style={{height:'40px',width:'250px',borderRadius:'5px'}}/>
+                    </fieldset>
+                </label>
+            
+                
+                <label for='password_input' > 
+                <fieldset className='flex flex-col items-start'>
+                    <h3 className='font-semibold text-2xl text-slate-100'>Password:</h3>     
+                    <input type='password' 
+                    value={password} 
+                    onChange={(e)=>setPassword(e.target.value)} 
+                    id='password_input'
+                  
+                    style={{height:'40px',width:'250px',borderRadius:'5px'}}/>
+                    </fieldset>
+                    </label>
+           
+            <button type='submit' className='bg-red-500 w-52 h-9 text-slate-200 rounded-lg mt-6 font-semibold hover:bg-gray-900 active:bg-gray-900' >Submit</button>
         </form>
     </center>
+       </div>
     )
 }
